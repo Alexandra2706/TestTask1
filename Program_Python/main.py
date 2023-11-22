@@ -1,7 +1,8 @@
 import random
 
 MAX_STRING_SIZE = 3
-LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{-}}[]., :();+='
+LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz \
+    0123456789{-}}[]., :();+='
 
 
 def enter_array_param(msg):
