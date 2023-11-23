@@ -37,12 +37,12 @@ public static class ArrayCreator
     /// <param name="array">Массив</param>
     /// <param name="min">Минимальная длина строки</param>
     /// <param name="max">Максимальная длина строки</param>
-    public static string[] Fill(this string[] array, int min = 1, int max = 10, int seed = 1)
+    public static string[] Fill(this string[] array, int min = 1, int max = 10, int seed = 0)
     {
         Random random = seed == 0 ? new Random() : new Random(seed);
         for (int i = 0; i < array.Length; i++)
         {
-            int lenString = random.Next(min, max);
+            int lenString = random.Next(min, max + 1);
             array[i] = GetRandomString(lenString);
         }
 
