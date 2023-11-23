@@ -29,9 +29,15 @@ def get_new_array(str_array):
 
 
 if __name__ == '__main__':
-    arr_size = enter_array_param('Введите размер массива: ')
-    min_value = enter_array_param('Введите минимальнимальную длину строки: ')
-    max_value = enter_array_param('Введите максимальную длину строки: ')
+    arr_size = abs(enter_array_param('Введите размер массива: '))
+    min_value = abs(enter_array_param(
+        'Введите минимальнимальную длину строки: '))
+    max_value = abs(enter_array_param('Введите максимальную длину строки: '))
+    if (min_value > max_value):
+        temp = min_value
+        min_value = max_value
+        max_value = temp
+
     string_array = get_random_array(arr_size, min_value, max_value)
     print(f'Исходный массив: {string_array}')
     new_array = get_new_array(string_array)
