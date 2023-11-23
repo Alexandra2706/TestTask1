@@ -26,7 +26,8 @@ public static class ArrayCreator
     {
         string sep = "\", \"";
         string str = $"[\"{String.Join(sep, array)}\"]";
-        Console.WriteLine(str);
+        if (array.Length == 0) Console.WriteLine("[]");
+        else Console.WriteLine(str);
         return str;
     }
 
@@ -36,7 +37,7 @@ public static class ArrayCreator
     /// <param name="array">Массив</param>
     /// <param name="min">Минимальная длина строки</param>
     /// <param name="max">Максимальная длина строки</param>
-    public static string[] Fill(this string[] array, int min = 1, int max = 10, int seed = 0)
+    public static string[] Fill(this string[] array, int min = 1, int max = 10, int seed = 1)
     {
         Random random = seed == 0 ? new Random() : new Random(seed);
         for (int i = 0; i < array.Length; i++)

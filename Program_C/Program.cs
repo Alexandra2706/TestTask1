@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-int MAX_STRING_SIZE = 3;
+﻿int MAX_STRING_SIZE = 3;
 
 
 int EnterArrayParam(string msg)
@@ -44,9 +42,9 @@ string[] GetNewArray(string[] array, int size)
 
 
 
-int arrSize = EnterArrayParam("Введите размер массива: ");
-int minValue = EnterArrayParam("Введите минимальнимальную длину строки: ");
-int maxValue = EnterArrayParam("Введите максимальную длину строки: ");
+int arrSize = Math.Abs(EnterArrayParam("Введите размер массива: "));
+int minValue = Math.Abs(EnterArrayParam("Введите минимальнимальную длину строки: "));
+int maxValue = Math.Abs(EnterArrayParam("Введите максимальную длину строки: "));
 if (minValue > maxValue)
 {
     int temp = minValue;
